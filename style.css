@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Coda:400,800|Righteous|Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+html{
+  overflow-x: hidden;
+}
+header{
+  width: 100%;
+  height: 100vh;
+}
+
+canvas {
+  width: 100vw;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+
+/*-----FONT SECTION-----*/
+
+.font-coda{
+    font-family: 'Coda', cursive;
+}
+
+.font-righteous{
+    font-family: 'Righteous', cursive;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-black{
+  background-color: #000000;
+}
+
+/* .text-shadow-clear{
+  text-shadow: -3px 2px 3px  rgb(39, 39, 39);
+} */
+
+.font-size-title-dev{
+  font-size: 4em;
+}
+
+.font-size-title-jr{
+  font-size: 3.5em;
+}
+
+/*-----Height & width section-----*/
+
+.h-section-100vh{
+  height: 100vh;
+}
+
+.h-section-80vh{
+  height: 80vh;
+}
+
+.h-section-50vh{
+  min-height:50vh;
+}
+
+.size-80-px{
+  width: 80px;
+}
+
+/*-----bg SECTION-----*/
+
+.bg-mid-black{
+  background: rgba(0, 0, 0, 0.795);
+}
+
+.div-3{
+  background: url(./medias/space-ship-1920-parallax.jpg);
+  /* background-size: cover; 
+  background-position: top; */
+  /* background-repeat: no-repeat; */
+}
+
+/*-----LINK SECTION-----*/
+
+.link-color{
+  color: white !important;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.link-color:hover{
+  color: #ff0040 !important;
+  border-bottom: 2px solid #ff0040;
+  /* font-weight: bold; */
+  transition: 0.5s ease-in-out;
+}
+
+.bg-photo{
+  width: 220px;
+  height: 309px;
+} 
+
+
+.bounce {
+  /* -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite; */
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+  0% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+    }
+
+    50% {
+      -webkit-transform: translateZ(-30px) translateY(-30px);
+              transform: translateZ(-30px) translateY(-30px);
+    }
+}
+
+.arrow{
+  width: 50px;
+  height: 50px;
+}
