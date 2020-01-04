@@ -4,19 +4,27 @@
 html{
   overflow-x: hidden;
 }
+
 header{
   width: 100%;
   height: 100vh;
 }
 
 canvas {
-  width: 100vw;
+  /* width: 100%; */
   position: absolute;
   top:0;
   left:0;
   z-index: -1;
 }
 
+.justify-content-evenly{
+  justify-content: space-evenly;
+}
+
+.text-align-last-center{
+  text-align-last: center;
+}
 
 /*-----FONT SECTION-----*/
 
@@ -32,12 +40,21 @@ canvas {
     font-family: 'Montserrat', sans-serif;
 }
 
-.bg-black{
-  background-color: #000000;
-}
 
-/* .text-shadow-clear{
-  text-shadow: -3px 2px 3px  rgb(39, 39, 39);
+
+.text-shadow-quatrecotes{
+  text-shadow: 
+  -5px 0px 10px #000000, 
+  -9px 0px 12px #000000, 
+  -15px 0px 12px #000000, 
+  5px 0px 10px #000000, 
+  9px 0px 12px #000000, 
+  15px 0px 12px #000000;
+}  
+
+
+/* .navbar-toggler-icon{
+  font-size: 2.5em;
 } */
 
 .font-size-title-dev{
@@ -48,10 +65,24 @@ canvas {
   font-size: 3.5em;
 }
 
+/*-----BORDERS-----*/
+
+.border-r-dark{
+  border-right: 3px solid black;
+}
+
+.border-bottom-grise{
+  border-bottom: 2px solid #29000e;
+}
+
+.border-top-grise{
+  border-top: 1px solid #460d1b; 
+}
+
 /*-----Height & width section-----*/
 
 .h-section-100vh{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .h-section-80vh{
@@ -60,23 +91,203 @@ canvas {
 
 .h-section-50vh{
   min-height:50vh;
+
 }
 
 .size-80-px{
   width: 80px;
 }
 
+.h-section-50pc{
+  height: 50%;
+}
+
+
+.pt-15{
+  padding-top: 15%;
+}
+
 /*-----bg SECTION-----*/
+
+.bg-black{
+  background-color: #000000;
+}
 
 .bg-mid-black{
   background: rgba(0, 0, 0, 0.795);
 }
 
-.div-3{
+/* .div-3{
   background: url(./medias/space-ship-1920-parallax.jpg);
-  /* background-size: cover; 
-  background-position: top; */
-  /* background-repeat: no-repeat; */
+} */
+
+.projetdisplaynone{
+  /* display: none; */
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#projet1{
+  background: url(./medias/blueasy.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+#projet1:hover{
+  filter: grayscale(0);
+}
+
+#projet1:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#projet2{
+  background-image: url(./medias/themodernistrestaurant.jpg);
+  background-position: center ; 
+  background-size: cover;
+  filter: grayscale(1);
+}
+
+#projet2:hover{
+  filter: grayscale(0);
+}
+
+
+#projet2:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#projet3{
+  background-image: url(./medias/pirolldesign.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+#projet3:hover{
+  filter: grayscale(0);
+}
+
+
+#projet3:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#projet4{
+  background-image: url(./medias/automotive2.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+#projet4:hover{
+  filter: grayscale(0);
+}
+
+#projet4:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+/*---------DEUXIEME ROW------------*/
+
+#projet5{
+  background: url(./medias/puissance4.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+.projetdisplaynone{
+  /* display: none; */
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#projet5:hover{
+  filter: grayscale(0);
+}
+
+#projet5:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#projet6{
+  background-image: url(./medias/tablesmultiplications.jpg);
+  background-position: center ; 
+  background-size: cover;
+  filter: grayscale(1);
+}
+
+#projet6:hover{
+  filter: grayscale(0);
+}
+
+
+#projet6:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#projet7{
+  background-image: url(./medias/puissance4.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+#projet7:hover{
+  filter: grayscale(0);
+}
+
+
+#projet7:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#projet8{
+  background-image: url(./medias/automotive.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+#projet8:hover{
+  filter: grayscale(0);
+}
+
+#projet8:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+/*-------DIV ATTENTE---------*/
+.waitforprojet{
+  background-image: url(./medias/wait.jpg);
+  background-position: center ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+
+.waitforprojet:hover{
+  filter: grayscale(0);
+}
+
+.waitforprojet:hover .projetdisplaynone{
+  opacity: 1;
+  transition: 0.5s ease;
 }
 
 /*-----LINK SECTION-----*/
@@ -84,20 +295,45 @@ canvas {
 .link-color{
   color: white !important;
   border-bottom: 2px solid transparent;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease;
 }
 
 .link-color:hover{
   color: #ff0040 !important;
   border-bottom: 2px solid #ff0040;
   /* font-weight: bold; */
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease;
+}
+
+.link-color-projet{
+  color: rgb(211, 211, 211) !important;
+  /* border-bottom: 2px solid transparent; */
+  transition: 0.5s ease;
+  
+}
+
+.link-color-projet:hover{
+  color: #ffffff !important;
+  transition: 0.5s ease;
+  text-decoration: none;
 }
 
 .bg-photo{
   width: 220px;
   height: 309px;
 } 
+
+.bg-photo::before{/*ajoute un contenu DEVANT le contenu*/
+  background-image: url(./medias/downloadarrowwhite.gif);
+  background-color: var(--grey-dark);
+  color: var(--white);
+  font-size: 7em;
+  text-align: center;
+  display: none;
+  line-height: 270px;
+  cursor: pointer;
+  opacity: 0.8;
+}
 
 
 .bounce {
@@ -126,3 +362,88 @@ canvas {
   width: 50px;
   height: 50px;
 }
+
+
+
+/*----------SECTION A PROPOS-------*/
+
+.list-group-item.active{
+  background-color: #ff0040;
+  border-color: #ff0040;
+}
+
+.custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control{
+  background-image: linear-gradient(0deg,#ff0040 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+.is-focused [class*=" bmd-label"], .is-focused [class^=bmd-label]{
+  color:#ff0040;
+}
+
+.btn-primary.custom-file-control:before, .btn.btn-primary{
+  color : #ff0040;
+}
+
+.btn-primary.active.custom-file-control:before, .btn-primary.custom-file-control:active:before, .btn-primary.custom-file-control:focus:before, .btn-primary.custom-file-control:hover:before, .btn-primary.focus.custom-file-control:before, .btn.btn-primary.active, .btn.btn-primary.focus, .btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover, .open>.btn-primary.dropdown-toggle.custom-file-control:before, .open>.btn.btn-primary.dropdown-toggle{
+  color: white;
+  background-color: #ff0040;
+}
+
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  h1{
+    font-size: 1.6rem;
+  }
+  .font-size-link-resp{
+    font-size: 1.6rem;
+  }
+  .font-size-title-dev{
+    font-size: 2rem;
+  }
+  .font-size-title-jr{
+    font-size: 2rem;
+  }
+}
+/* 
+// Small devices (landscape phones, 576px and up)
+
+*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .font-size-link-resp{
+    font-size: 2rem;
+  }
+
+  .font-size-title-dev{
+    font-size: 3rem;
+  }
+  .font-size-title-jr{
+    font-size: 2.8rem;
+  }
+
+ }
+/*
+// Medium devices (tablets, 768px and up)
+ */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .font-size-link-resp{
+    font-size: 2rem;
+  }
+  .font-size-title-dev{
+    font-size: 1.9rem;
+  }
+  .font-size-title-jr{
+    font-size: 1.8em;
+  }
+  .projetdisplaynone{
+    /* display: none; */
+    opacity: 1;
+    transition: none;
+  }
+  #projet1, #projet2, #projet3, #projet4, #projet5, #projet6{
+    filter: grayscale(0);
+  } 
+ }
+
