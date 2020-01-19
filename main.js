@@ -1,4 +1,5 @@
-let scene, camera, renderer, stars, starGeo;
+let scene, camera, renderer, stars, starGeo ="coucou";
+var containerInner = document.querySelector('#innerCanvas');
 
 function init() {
 
@@ -10,7 +11,16 @@ function init() {
 
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio( window.devicePixelRatio );
+  // renderer.domElement.width = containerInner.clientWidth;
+  // renderer.domElement.height = containerInner.clientHeight;
+  renderer.domElement.style.width = containerInner.clientWidth + "px";
+  renderer.domElement.style.height = containerInner.clientHeight + "px";
   document.querySelector('#innerCanvas').appendChild(renderer.domElement);
+  console.log(window.innerWidth, window.innerHeight);
+  console.log (containerInner.clientWidth, containerInner.clientHeight);
+  console.log (containerInner.offsetWidth, containerInner.offsetHeight);
+console.dir(renderer.domElement);
 
   starGeo = new THREE.Geometry();
   for (let i = 0; i < 6000; i++) {
@@ -34,15 +44,18 @@ function init() {
   stars = new THREE.Points(starGeo, starMaterial);
   scene.add(stars);
 
-  window.addEventListener("resize", onWindowResize, false);
+  window.addEventListener( "resize", onWindowResize, false );
   animate();
 }
 
+function onWindowResize(){
 
-function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.domElement.style.width = containerInner.clientWidth + "px";
+  renderer.domElement.style.height = containerInner.clientHeight + "px";
+
 }
 
 function animate() {
